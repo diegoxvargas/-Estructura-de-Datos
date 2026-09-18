@@ -15,7 +15,18 @@ namespace ConsoleApp1
             { 7, 6, 5, 2, 8 };
             Console.WriteLine($"Elemento en [0]: {num[0]}");
 
+            string[] estudiantes =
+           { "Pedro", "juan", "Esteban", "Alvaro", "Danilo", "Janier", "Samuel"};
+
+            for (int i = 0; i < estudiantes.Length; i++)
+            {
+                Console.WriteLine($"inddice [{i}]: {estudiantes[i]}");
+            
+            }
 
         }
+
+
+       
     }
 }
