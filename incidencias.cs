@@ -106,7 +106,7 @@ namespace ConsoleApp3
 
         static void Main(string[] args)
         {
-            List<string[]> incidenciasToday = new List<string[]>
+            List<string[]> incidenciasToday = new List<string[]>//usamos list<string> para hacer una lista con los datos de abajo
             {
             new string[] {"1","Diego Vargas","No imprime","Alta" },
             new string[] {"2","Carlos Martinex","Olvido la contraseña","Baja" },
@@ -117,21 +117,21 @@ namespace ConsoleApp3
 
             };
             Console.WriteLine("REGISTRO DE INCIDENCIAS UNICARIBE");
-            GuardarIncidencias(incidenciasToday);
+            GuardarIncidencias(incidenciasToday);//guardamos los datos en "incidenciastoday" o incidencias de hoy 
             Console.WriteLine("\n-----Leyendo incidencias del archivo ----");
-            List<string[]> incidenciasleidas = LeerIncidencias();
+            List<string[]> incidenciasleidas = LeerIncidencias();//usamos list<string> para leer los datos y lo mostramos abajo
 
             Console.WriteLine("\n LISTADO DE INCIDENCIAS LEÍDAS: ");
-            Console.WriteLine($"{"ID",-4}){ "Usuario", -15} { "Descripcion", -20} {"prioridad", -10}");
+            Console.WriteLine($"{"ID",-4}){ "Usuario", -15} { "Descripcion", -20} {"prioridad", -10}");//de esta forma espesifica 
             Console.WriteLine(new string('-',55));
 
-            foreach (string[] inc in incidenciasleidas)
+            foreach (string[] inc in incidenciasleidas)// "para cada inc como cadena de texto en incidencias leidas hacer lo siguiente"
             {
-                if (inc.Length < 4) continue;
+                if (inc.Length < 4) continue;//si el numero de incidencias es menor que 4 entonces mostramos lo de abajo
                 Console.WriteLine($"{inc[0],-4}{inc[1],-15} {inc[2],-20}{inc[3],-10}");
             
             }
-            generarReporte(incidenciasToday);
+            generarReporte(incidenciasToday);//aqui llamamos a la funcion generarReporte
             Console.WriteLine("\nPresione cualquier tecla para salir!!!!");
             Console.ReadKey();
             
